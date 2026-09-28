@@ -1,0 +1,171 @@
+:root {
+    --color-primary: #E8B4B8; 
+    --color-primary-dark: #fff6f4; 
+    --color-text: hsl(0, 0%, 53%);
+    --color-border: #hsl(0, 0%, 53%); 
+    --color-bg: #FFF; 
+    --font-main: 'Inter', sans-serif; 
+}
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: var(--font-main); 
+}
+
+
+
+.header {
+    width: 100%;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky; 
+    top: 0;
+    z-index: 100; 
+}
+
+.header-container {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 16px 24px;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 24px; 
+}
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 80px;
+    object-fit: contain; 
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column; 
+     color: var(--color-text);
+}
+
+.logo-title {
+    font-size: 16px; 
+    font-weight: 700; 
+    color: var(--color-text);
+}
+
+.logo-subtitle {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--color-text-light);
+}
+
+/* NAVEGAÇÃO (Menu) */
+
+.main-nav {
+    display: flex;
+    align-items: center; 
+    gap: 32px; 
+}
+
+.nav-link {
+    text-decoration: none; 
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-light);
+    transition: color 0.2s ease; 
+}
+
+.nav-link:hover {
+    color: var(--color-text); 
+}
+
+.nav-link.active {
+    color: var(--color-primary); 
+    font-weight: 600;
+}
+
+/* AÇÕES HEADER (Busca + botão) */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.search-box {
+    position: relative; 
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    font-family: var(--font-main);
+    width: 220px;
+    padding: 10px 40px 10px 16px; 
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none; 
+}
+
+.search-box input:focus {
+    border-color: var(--color-primary);
+}
+
+.search-box input::placeholder {
+    color: var(--color-text-light);
+}
+
+.search-icon {
+    position: absolute; 
+    right: 14px;
+    fill: var(--color-text-light); 
+    pointer-events: none; 
+    width: 25px; 
+}
+
+.btn-primary {
+    font-family: var(--font-main);
+    background-color: var(--color-primary);
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer; 
+    white-space: nowrap; 
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* Botão */
+
+.btn-primary {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--color-primary);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+}
+
+
