@@ -1,59 +1,665 @@
-
 <!DOCTYPE html>
+<!-- Declara que este documento utiliza HTML5 -->
+
 <html lang="pt-BR">
+<!-- Elemento raiz da página. Define o idioma como português brasileiro -->
+
 <head>
+    <!-- Informações que não aparecem diretamente na página -->
+
     <meta charset="UTF-8">
+    <!-- Permite utilizar acentos e caracteres especiais -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fifth Bloom</title>
+    <!-- Adapta o site para diferentes tamanhos de tela -->
+
+    <title>Fifth Bloom | Beleza e Cosméticos</title>
+    <!-- Título exibido na aba do navegador -->
+
     <link rel="stylesheet" href="style.css">
+    <!-- Conecta o arquivo CSS responsável pelo visual do site -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Importa a fonte Inter -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" rel="stylesheet">
+    <!-- Importa os ícones do Google -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Importa ícones das redes sociais -->
 </head>
+
 <body>
 
+    <!-- =====================================================
+         AVISO SUPERIOR
+         ===================================================== -->
+
+    <div class="top-bar">
+        FRETE GRÁTIS em compras acima de R$149
+    </div>
+
+
+    <!-- =====================================================
+         CABEÇALHO DO SITE
+         ===================================================== -->
+
     <header class="header">
+
         <div class="header-container">
 
-            <a href="#" class="logo">
-                <img src="./assets/Fifth.png" alt="Logo Fifth Bloom" width="80">
+            <!-- Logo da marca -->
 
-                <span class="logo-text">
-                    <span class="logo-title">Fifth Bloom</span>
-                    <span class="logo-subtitle">Marca de Cosméticos</span>
-                </span>
+            <a href="index.html" class="logo">
+
+                <img src="./assets/logo.png" alt="Logo Fifth Bloom">
+
             </a>
 
-            <nav class="main-nav">
-                <a href="#" class="nav-link">Início</a>
-                <a href="./produtos.html" class="nav-link">Produtos</a>
-                <a href="#" class="nav-link">Lançamentos</a>
-                <a href="fifth.html" class="nav-link">Promoções</a>
+
+            <!-- Menu de navegação -->
+
+            <nav class="main-nav" id="main-nav">
+
+                <a href="index.html" class="nav-link active">Início</a>
+
+                <a href="#produtos" class="nav-link">Produtos</a>
+
+                <a href="#lancamentos" class="nav-link">Lançamentos</a>
+
+                <a href="#promocoes" class="nav-link">Promoções</a>
+
+                <a href="#sobre" class="nav-link">Sobre nós</a>
+
             </nav>
 
+
+            <!-- Ações do cabeçalho -->
+
             <div class="header-actions">
-                <div class="search-box">
-                    <input type="text" placeholder="Buscar produtos...">
-                    <img
-                        class="search-icon"
-                        src="./assets/image.png"
-                        alt="Ícone de pesquisa"
-                    >
-                </div>
 
-                <button class="btn-primary" type="button">
-                    Começar agora
-                </button>
+                <!-- Pesquisa -->
 
-                <button id="btn-tema" type="button">
-                    Alternar tema
-                </button>
+                <a href="#pesquisa" class="header-action">
+
+                    <span class="material-symbols-outlined">
+                        search
+                    </span>
+
+                    <span>Pesquisar</span>
+
+                </a>
+
+
+                <!-- Sacolinha de compras -->
+
+                <a href="#sacola" class="header-action cart-action">
+
+                    <span class="material-symbols-outlined">
+                        shopping_bag
+                    </span>
+
+                    <span class="cart-count">0</span>
+
+                </a>
+
+
+                <!-- Perfil do usuário -->
+
+                <a href="#perfil" class="header-action profile-action">
+
+                    <span class="material-symbols-outlined">
+                        person
+                    </span>
+
+                    <span>Perfil</span>
+
+                </a>
+
             </div>
 
-            <button class="hamburguer" id="btn-menu" type="button">
-                ☰ Menu
+
+            <!-- Botão do menu para dispositivos móveis -->
+
+            <button class="hamburguer" id="btn-menu" aria-label="Abrir menu">
+                ☰
             </button>
 
         </div>
+
     </header>
 
-    <script src="js/script.js"></script>
-</body>
-</html>
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+         ===================================================== -->
+
+    <main>
+
+
+        <!-- =====================================================
+             SEÇÃO PRINCIPAL / DESTAQUES
+             ===================================================== -->
+
+        <section class="hero" id="inicio">
+
+            <div class="container hero-container">
+
+
+                <!-- PRIMEIRA COLUNA: BANNER COM TEXTO -->
+
+                <div class="hero-content">
+
+                    <h1 class="hero-title">
+
+                        BELEZA QUE FLORESCE DE DENTRO PARA FORA.
+
+                    </h1>
+
+                    <div class="hero-line"></div>
+
+                    <p class="hero-text">
+
+                        Maquiagem e autocuidado para realçar o que te faz única.
+
+                    </p>
+
+
+                    <!-- Botão para comprar -->
+
+                    <a href="#produtos" class="btn-hero">
+
+                        COMPRAR AGORA
+
+                        <span class="material-symbols-outlined">
+                            chevron_right
+                        </span>
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- SEGUNDA COLUNA: IMAGEM PRINCIPAL -->
+
+                <div class="hero-image" id="lancamentos">
+
+                    <img
+                        src="./assets/banner-principal.jpg"
+                        alt="Produto Fifth Bloom em destaque"
+                    >
+
+                    <!-- Indicadores do carrossel -->
+
+                    <div class="hero-dots">
+
+                        <span class="dot active"></span>
+
+                        <span class="dot"></span>
+
+                        <span class="dot"></span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TERCEIRA COLUNA: PRODUTOS MAIS AMADOS -->
+
+                <section class="best-sellers" id="produtos">
+
+                    <div class="section-header">
+
+                        <h2>MAIS AMADOS</h2>
+
+                        <a href="#todos-produtos" class="view-all">
+
+                            VER TODOS
+
+                            <span class="material-symbols-outlined">
+                                arrow_forward
+                            </span>
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="product-list">
+
+
+                        <!-- PRODUTO 1 -->
+
+                        <article class="product-card">
+
+                            <img
+                                src="./assets/serum-ouro.jpg"
+                                alt="Sérum de ouro"
+                            >
+
+                            <div class="product-info">
+
+                                <h3>SÉRUM OURO</h3>
+
+                                <p>
+                                    Sérum nutritivo com ação antioxidante
+                                    que ajuda a revitalizar a pele.
+                                </p>
+
+                                <div class="product-bottom">
+
+                                    <strong>R$49,90</strong>
+
+                                    <div class="rating">
+                                        ★★★★★
+                                        <small>(120)</small>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- PRODUTO 2 -->
+
+                        <article class="product-card">
+
+                            <img
+                                src="./assets/oleo-facial.jpg"
+                                alt="Óleo facial"
+                            >
+
+                            <div class="product-info">
+
+                                <h3>ÓLEO FACIAL</h3>
+
+                                <p>
+                                    Óleo nutritivo que hidrata
+                                    profundamente sem pesar.
+                                </p>
+
+                                <div class="product-bottom">
+
+                                    <strong>R$39,90</strong>
+
+                                    <div class="rating">
+                                        ★★★★★
+                                        <small>(120)</small>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- PRODUTO 3 -->
+
+                        <article class="product-card">
+
+                            <img
+                                src="./assets/creme-antidade.jpg"
+                                alt="Creme antidade"
+                            >
+
+                            <div class="product-info">
+
+                                <h3>CREME ANTIDADE</h3>
+
+                                <p>
+                                    Creme facial desenvolvido para suavizar
+                                    linhas finas e melhorar a elasticidade da pele.
+                                </p>
+
+                                <div class="product-bottom">
+
+                                    <strong>R$89,90</strong>
+
+                                    <div class="rating">
+                                        ★★★★★
+                                        <small>(120)</small>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- PRODUTO 4 -->
+
+                        <article class="product-card">
+
+                            <img
+                                src="./assets/esfoliante.jpg"
+                                alt="Esfoliante corporal"
+                            >
+
+                            <div class="product-info">
+
+                                <h3>ESFOLIANTE CORPORAL</h3>
+
+                                <p>
+                                    Remove células mortas e impurezas,
+                                    deixando a pele mais lisa e uniforme.
+                                </p>
+
+                                <div class="product-bottom">
+
+                                    <strong>R$109,90</strong>
+
+                                    <div class="rating">
+                                        ★★★★★
+                                        <small>(120)</small>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- Link para todos os produtos -->
+
+                    <a href="#todos-produtos" class="all-products">
+
+                        VER TODOS OS PRODUTOS
+
+                        <span class="material-symbols-outlined">
+                            arrow_forward
+                        </span>
+
+                    </a>
+
+                </section>
+
+
+
+                <!-- QUARTA COLUNA: PROMOÇÕES E BENEFÍCIOS -->
+
+                <section class="promotions" id="promocoes">
+
+
+                    <!-- Banner promocional -->
+
+                    <div class="promotion-banner">
+
+                        <h2>PROMOÇÕES</h2>
+
+                        <div class="promotion-content">
+
+                            <h3>ATÉ 30% OFF</h3>
+
+                            <p>em produtos selecionados</p>
+
+                            <a href="#todos-produtos" class="btn-promotion">
+
+                                APROVEITAR
+
+                                <span class="material-symbols-outlined">
+                                    keyboard_double_arrow_right
+                                </span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Benefícios da loja -->
+
+                    <div class="benefits">
+
+
+                        <!-- Frete grátis -->
+
+                        <div class="benefit-item">
+
+                            <span class="material-symbols-outlined">
+                                local_shipping
+                            </span>
+
+                            <div>
+
+                                <h3>FRETE GRÁTIS</h3>
+
+                                <p>Em compras acima de R$149</p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Cruelty free -->
+
+                        <div class="benefit-item">
+
+                            <span class="material-symbols-outlined">
+                                spa
+                            </span>
+
+                            <div>
+
+                                <h3>BELEZA COM PROPÓSITO</h3>
+
+                                <p>Produtos cruelty free</p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Compra segura -->
+
+                        <div class="benefit-item">
+
+                            <span class="material-symbols-outlined">
+                                credit_card
+                            </span>
+
+                            <div>
+
+                                <h3>COMPRA SEGURA</h3>
+
+                                <p>Seus dados protegidos</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SEÇÃO PARA TODOS OS PRODUTOS
+             ===================================================== -->
+
+        <section class="all-products-section" id="todos-produtos">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    Descubra nossos produtos
+                </h2>
+
+                <p class="section-description">
+                    Encontre seus favoritos e descubra novas formas
+                    de cuidar de você.
+                </p>
+
+                <!-- Aqui poderão ser adicionados novos produtos -->
+
+                <div class="products-grid">
+
+                    <!-- Os produtos podem ser adicionados aqui futuramente -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!--SOBRE A MARCA-->
+
+        <section class="about-section" id="sobre">
+
+            <div class="container about-container">
+
+                <h2>FIFTH BLOOM</h2>
+
+                <p>
+                    Acreditamos que a beleza é uma forma de expressão.
+                    Nossa marca nasceu para incentivar a criatividade,
+                    o autocuidado e a liberdade de cada pessoa
+                    de revelar sua própria beleza.
+                </p>
+
+                <p>
+                    Floresça no seu tempo. Seja você mesma.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!--RODAPÉ DO SITE-->
+
+    <footer class="footer">
+
+        <div class="container footer-container">
+
+
+            <!-- PRIMEIRA COLUNA: NEWSLETTER -->
+
+            <div class="footer-newsletter">
+
+                <h3>NEWSLETTER</h3>
+
+                <p>
+                    Receba novidades e promoções exclusivas
+                </p>
+
+                <form class="newsletter-form">
+
+                    <input
+                        type="email"
+                        placeholder="Seu e-mail"
+                        required
+                    >
+
+                    <button type="submit" aria-label="Cadastrar e-mail">
+
+                        <span class="material-symbols-outlined">
+                            arrow_forward
+                        </span>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+
+
+            <!-- SEGUNDA COLUNA: REDES SOCIAIS -->
+
+            <div class="footer-social">
+
+                <h3>SIGA A FIFTH BLOOM</h3>
+
+                <div class="social-links">
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+
+                    <a href="#" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a href="#" aria-label="Pinterest">
+                        <i class="fa-brands fa-pinterest"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TERCEIRA COLUNA: FORMAS DE PAGAMENTO -->
+
+            <div class="footer-payment">
+
+                <h3>FORMAS DE PAGAMENTO</h3>
+
+                <div class="payment-icons">
+
+                    <i class="fa-brands fa-cc-visa"></i>
+
+                    <i class="fa-brands fa-cc-mastercard"></i>
+
+                    <i class="fa-brands fa-pix"></i>
+
+                    <i class="fa-brands fa-cc-amex"></i>
+
+                    <i class="fa-brands fa-apple-pay"></i>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- Direitos autorais -->
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; <span id="ano"></span> Fifth Bloom.
+                Todos os direitos reservados.
+            </p>
+
+        </div>
+
+    </footer>
