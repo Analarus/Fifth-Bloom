@@ -1,0 +1,297 @@
+
+/* PÁGINA DE PROMOÇÕES */
+
+.promotions-page {
+    width: 100%;
+    padding: 35px 5% 80px;
+    background-color: #fff;
+}
+
+/* TÍTULO */
+
+.promotions-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.promotions-heading h1 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.promotions-heading p {
+    font-size: 11px;
+    color: #777;
+    letter-spacing: 1px;
+}
+
+/* ORGANIZAÇÃO */
+
+.promotions-container {
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    gap: 35px;
+    max-width: 1450px;
+    margin: auto;
+}
+
+/* FILTROS LATERAIS */
+
+.promotions-sidebar {
+    padding-top: 5px;
+}
+
+.promotion-filter {
+    border-top: 2px solid #777;
+    padding: 15px 0 20px;
+    margin-bottom: 12px;
+}
+
+.promotion-filter h2 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.promotion-filter label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 13px;
+    color: #555;
+    margin: 12px 0;
+    cursor: pointer;
+}
+
+.promotion-filter input {
+    accent-color: #c9959a;
+    cursor: pointer;
+}
+
+.filter-stars {
+    color: #c18c93;
+    letter-spacing: 1px;
+}
+
+.promotion-filter small {
+    color: #555;
+}
+
+.clear-promotion-filters {
+    border: none;
+    background: transparent;
+    color: #c18c93;
+    font-size: 11px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* BARRA DE ORDENAÇÃO */
+
+.promotions-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: #666;
+}
+
+.promotion-sort {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.promotion-sort select {
+    border: none;
+    background: transparent;
+    padding: 5px;
+    font-family: inherit;
+    font-size: 12px;
+    color: #444;
+    outline: none;
+}
+
+/* GRADE */
+
+.promotions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 35px 30px;
+}
+
+.promotion-card {
+    min-width: 0;
+}
+
+/* IMAGENS */
+
+.promotion-image {
+    width: 100%;
+    height: 155px;
+    position: relative;
+    overflow: hidden;
+    background-color: #eee9e5;
+}
+
+.promotion-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ETIQUETA DE DESCONTO */
+
+.discount-tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    background-color: #d5a5a9;
+    color: #fff;
+
+    padding: 9px 12px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* INFORMAÇÕES */
+
+.promotion-info {
+    padding-top: 10px;
+}
+
+.promotion-info h3 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 7px;
+}
+
+.promotion-info p {
+    font-size: 11px;
+    line-height: 1.6;
+    color: #777;
+    min-height: 38px;
+}
+
+/* PREÇOS */
+
+.promotion-prices {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    margin-top: 10px;
+}
+
+.promotion-prices del {
+    font-size: 10px;
+    color: #999;
+}
+
+.promotion-prices strong {
+    font-size: 15px;
+    font-weight: 800;
+    color: #333;
+}
+
+/* AVALIAÇÕES */
+
+.promotion-rating {
+    font-size: 12px;
+    color: #c18c93;
+    margin: 8px 0;
+}
+
+/* BOTÃO */
+
+.promotion-info .add-cart {
+    width: 100%;
+    padding: 11px 5px;
+    border: none;
+    background-color: #d5a5a9;
+    color: white;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.promotion-info .add-cart:hover {
+    background-color: #b98289;
+}
+
+/* NENHUM PRODUTO */
+
+.no-promotions {
+    text-align: center;
+    padding: 40px;
+    color: #777;
+}
+
+/* TABLETS */
+
+@media (max-width: 1000px) {
+
+    .promotions-container {
+        grid-template-columns: 180px 1fr;
+        gap: 20px;
+    }
+
+    .promotions-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+    .promotions-container {
+        grid-template-columns: 1fr;
+    }
+
+    .promotions-sidebar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .promotions-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px 15px;
+    }
+
+    .promotion-image {
+        height: 130px;
+    }
+
+    .promotions-heading h1 {
+        font-size: 23px;
+    }
+
+}
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 400px) {
+
+    .promotions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .promotion-image {
+        height: 190px;
+    }
+
+}

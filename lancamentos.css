@@ -1,0 +1,306 @@
+
+/* BANNER DE LANÇAMENTOS */
+
+.launch-banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 480px;
+    background-color: #F8E9E9;
+}
+
+.launch-banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 65px 12%;
+}
+
+.launch-subtitle {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #A8757A;
+    margin-bottom: 22px;
+}
+
+.launch-banner-content h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(35px, 4vw, 55px);
+    line-height: 1.2;
+    color: #302A28;
+    margin-bottom: 20px;
+}
+
+.launch-banner-content p {
+    font-size: 14px;
+    line-height: 1.9;
+    color: #77706D;
+    max-width: 390px;
+    margin-bottom: 30px;
+}
+
+.launch-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #D99CA3;
+    color: white;
+    padding: 15px 22px;
+    font-size: 11px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.launch-button:hover {
+    background-color: #B98085;
+}
+
+.launch-banner-image {
+    min-width: 0;
+    overflow: hidden;
+}
+
+.launch-banner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* SEÇÃO DE PRODUTOS */
+
+.launch-products {
+    padding: 75px 5%;
+    background-color: #FFFFFF;
+}
+
+.launch-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.launch-heading > span {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #B98085;
+}
+
+.launch-heading h2 {
+    font-family: Georgia, serif;
+    font-size: 35px;
+    font-weight: 500;
+    margin: 12px 0;
+}
+
+.launch-heading p {
+    font-size: 13px;
+    color: #77706D;
+}
+
+
+/* GRADE DE PRODUTOS */
+
+.launch-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.launch-card {
+    min-width: 0;
+    border: 1px solid #E8E3DE;
+    transition: 0.3s ease;
+}
+
+.launch-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(48, 42, 40, 0.08);
+}
+
+.launch-image {
+    position: relative;
+    height: 280px;
+    background-color: #F8F5F0;
+    overflow: hidden;
+}
+
+.launch-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 25px;
+    transition: transform 0.3s ease;
+}
+
+.launch-card:hover .launch-image img {
+    transform: scale(1.05);
+}
+
+.new-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+    background-color: #E8B4B8;
+    color: #FFFFFF;
+    padding: 6px 12px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.launch-info {
+    padding: 20px 16px;
+}
+
+.launch-category {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #B98085;
+}
+
+.launch-info h3 {
+    font-size: 15px;
+    margin: 9px 0;
+    color: #302A28;
+}
+
+.launch-info p {
+    font-size: 11px;
+    color: #77706D;
+    margin-bottom: 18px;
+}
+
+.launch-price {
+    margin-bottom: 18px;
+}
+
+.launch-price strong {
+    font-size: 16px;
+    color: #302A28;
+}
+
+.launch-buy {
+    display: block;
+    text-align: center;
+    padding: 12px 8px;
+    border: 1px solid #D99CA3;
+    color: #B98085;
+    font-size: 10px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.launch-buy:hover {
+    background-color: #D99CA3;
+    color: #FFFFFF;
+}
+
+
+/* MENSAGEM FINAL */
+
+.launch-message {
+    background-color: #F8E9E9;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.launch-message > span {
+    color: #B98085;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.launch-message h2 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: 500;
+    margin: 15px 0;
+}
+
+.launch-message p {
+    font-size: 13px;
+    color: #77706D;
+    margin-bottom: 25px;
+}
+
+.launch-message a {
+    display: inline-block;
+    background-color: #D99CA3;
+    color: white;
+    padding: 14px 22px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1000px) {
+
+    .launch-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .launch-banner-content {
+        padding: 40px;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .launch-banner {
+        grid-template-columns: 1fr;
+    }
+
+    .launch-banner-content {
+        padding: 45px 25px;
+    }
+
+    .launch-banner-image {
+        height: 350px;
+    }
+
+    .launch-products {
+        padding: 50px 18px;
+    }
+
+    .launch-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .launch-image {
+        height: 190px;
+    }
+
+    .launch-info {
+        padding: 14px 10px;
+    }
+
+    .launch-info h3 {
+        font-size: 13px;
+    }
+
+    .launch-info p {
+        font-size: 10px;
+    }
+
+    .launch-heading h2 {
+        font-size: 28px;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .launch-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

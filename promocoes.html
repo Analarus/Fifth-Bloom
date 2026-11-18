@@ -1,0 +1,505 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Promoções | Fifth Bloom</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="promocoes.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- AVISO SUPERIOR -->
+    <div class="top-bar">
+        FRETE GRÁTIS em compras acima de R$149
+    </div>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+
+        <div class="header-container">
+
+            <a href="fifth.html" class="logo">
+                <img src="./assets/Fifth.png" alt="Logo Fifth Bloom">
+            </a>
+
+            <nav class="main-nav" id="main-nav">
+
+                <a href="fifth.html" class="nav-link">Início</a>
+
+                <a href="produtos.html" class="nav-link">Produtos</a>
+
+                <a href="lancamentos.html" class="nav-link">Lançamentos</a>
+
+                <a href="promocoes.html" class="nav-link active">Promoções</a>
+
+                <a href="sobre.html" class="nav-link">Sobre nós</a>
+
+            </nav>
+
+            <div class="header-actions">
+
+                <a href="#pesquisa" class="header-action">
+                    <span class="material-symbols-outlined">search</span>
+                    <span>Pesquisar</span>
+                </a>
+
+                <a href="carrinho.html" class="header-action cart-action">
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                    <span class="cart-count">0</span>
+                </a>
+
+                <a href="login.html" class="header-action profile-action">
+                    <span class="material-symbols-outlined">person</span>
+                    <span>Perfil</span>
+                </a>
+
+            </div>
+
+            <button class="hamburguer" id="btn-menu" aria-label="Abrir menu">
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="promotions-page">
+
+        <div class="promotions-heading">
+
+            <h1>PROMOÇÕES</h1>
+
+            <p>PRODUTOS FEITOS PARA REALÇAR SUA BELEZA NATURAL</p>
+
+        </div>
+
+
+        <div class="promotions-container">
+
+            <!-- BARRA LATERAL -->
+            <aside class="promotions-sidebar">
+
+                <div class="promotion-filter">
+
+                    <h2>Categorias</h2>
+
+                    <label>
+                        <input type="checkbox" class="category-filter" value="skincare">
+                        Skincare
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="category-filter" value="corpo">
+                        Corpo
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="category-filter" value="maquiagem">
+                        Maquiagem
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="category-filter" value="hidratantes">
+                        Hidratantes
+                    </label>
+
+                </div>
+
+
+                <div class="promotion-filter">
+
+                    <h2>Descontos</h2>
+
+                    <label>
+                        <input type="checkbox" class="discount-filter" value="15">
+                        15% OFF
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="discount-filter" value="20">
+                        20% OFF
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="discount-filter" value="30">
+                        30% OFF
+                    </label>
+
+                </div>
+
+
+                <div class="promotion-filter">
+
+                    <h2>Avaliações</h2>
+
+                    <label>
+                        <input type="checkbox" class="rating-filter" value="5">
+                        <span class="filter-stars">★★★★★</span>
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="rating-filter" value="4">
+                        <span class="filter-stars">★★★★☆</span>
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="rating-filter" value="3">
+                        <span class="filter-stars">★★★☆☆</span>
+                        <small>e menos</small>
+                    </label>
+
+                </div>
+
+                <button class="clear-promotion-filters" id="clear-promotion-filters">
+                    LIMPAR FILTROS
+                </button>
+
+            </aside>
+
+
+            <!-- PRODUTOS EM PROMOÇÃO -->
+            <section class="promotions-content">
+
+                <div class="promotions-toolbar">
+
+                    <span id="promotion-count">5 produtos</span>
+
+                    <div class="promotion-sort">
+
+                        <label for="promotion-sort">Ordenar por:</label>
+
+                        <select id="promotion-sort">
+                            <option value="default">Padrão</option>
+                            <option value="menor">Menor preço</option>
+                            <option value="maior">Maior preço</option>
+                            <option value="desconto">Maior desconto</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="promotions-grid" id="promotions-grid">
+
+
+                    <!-- PRODUTO 1 -->
+                    <article class="promotion-card"
+                        data-category="corpo"
+                        data-discount="25"
+                        data-price="82.43"
+                        data-original="109.90"
+                        data-rating="5"
+                        data-name="Esfoliante Corporal">
+
+                        <div class="promotion-image">
+
+                            <span class="discount-tag">25% OFF</span>
+
+                            <img src="./assets/esfoliante.jpg" alt="Esfoliante Corporal">
+
+                        </div>
+
+                        <div class="promotion-info">
+
+                            <h3>ESFOLIANTE CORPORAL</h3>
+
+                            <p>
+                                Remove células mortas e impurezas, deixando a pele mais lisa, renovada e uniforme.
+                            </p>
+
+                            <div class="promotion-prices">
+                                <del>R$109,90</del>
+                                <strong>R$82,43</strong>
+                            </div>
+
+                            <div class="promotion-rating">★★★★★</div>
+
+                            <button class="add-cart">
+                                ADICIONAR AO CARRINHO
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUTO 2 -->
+                    <article class="promotion-card"
+                        data-category="skincare"
+                        data-discount="20"
+                        data-price="31.92"
+                        data-original="39.90"
+                        data-rating="5"
+                        data-name="Óleo Facial">
+
+                        <div class="promotion-image">
+
+                            <span class="discount-tag">20% OFF</span>
+
+                            <img src="./assets/oleo-facial.jpg" alt="Óleo Facial">
+
+                        </div>
+
+                        <div class="promotion-info">
+
+                            <h3>ÓLEO FACIAL</h3>
+
+                            <p>
+                                Fórmula leve e iluminadora que proporciona um glow sutil e elegante.
+                            </p>
+
+                            <div class="promotion-prices">
+                                <del>R$39,90</del>
+                                <strong>R$31,92</strong>
+                            </div>
+
+                            <div class="promotion-rating">★★★★★</div>
+
+                            <button class="add-cart">
+                                ADICIONAR AO CARRINHO
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUTO 3 -->
+                    <article class="promotion-card"
+                        data-category="maquiagem"
+                        data-discount="30"
+                        data-price="32.13"
+                        data-original="45.90"
+                        data-rating="5"
+                        data-name="Máscara Fleurs D'Or">
+
+                        <div class="promotion-image">
+
+                            <span class="discount-tag">30% OFF</span>
+
+                            <img src="./assets/mascara-fleurs-dor.jpg" alt="Máscara Fleurs D'Or">
+
+                        </div>
+
+                        <div class="promotion-info">
+
+                            <h3>MÁSCARA FLEURS D'OR</h3>
+
+                            <p>
+                                Máscara para cílios com efeito alongador e volume.
+                            </p>
+
+                            <div class="promotion-prices">
+                                <del>R$45,90</del>
+                                <strong>R$32,13</strong>
+                            </div>
+
+                            <div class="promotion-rating">★★★★★</div>
+
+                            <button class="add-cart">
+                                ADICIONAR AO CARRINHO
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUTO 4 -->
+                    <article class="promotion-card"
+                        data-category="maquiagem"
+                        data-discount="30"
+                        data-price="55.93"
+                        data-original="79.90"
+                        data-rating="5"
+                        data-name="Blush Rosa Pétali">
+
+                        <div class="promotion-image">
+
+                            <span class="discount-tag">30% OFF</span>
+
+                            <img src="./assets/blush-rosa-petali.jpg" alt="Blush Rosa Pétali">
+
+                        </div>
+
+                        <div class="promotion-info">
+
+                            <h3>BLUSH ROSA PÉTALI</h3>
+
+                            <p>
+                                Blush de acabamento delicado e natural, inspirado na suavidade das pétalas.
+                            </p>
+
+                            <div class="promotion-prices">
+                                <del>R$79,90</del>
+                                <strong>R$55,93</strong>
+                            </div>
+
+                            <div class="promotion-rating">★★★★★</div>
+
+                            <button class="add-cart">
+                                ADICIONAR AO CARRINHO
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUTO 5 -->
+                    <article class="promotion-card"
+                        data-category="hidratantes"
+                        data-discount="20"
+                        data-price="103.92"
+                        data-original="129.90"
+                        data-rating="5"
+                        data-name="Crème Bloom Supreme">
+
+                        <div class="promotion-image">
+
+                            <span class="discount-tag">20% OFF</span>
+
+                            <img src="./assets/creme-bloom-supreme.jpg" alt="Crème Bloom Supreme">
+
+                        </div>
+
+                        <div class="promotion-info">
+
+                            <h3>CRÈME BLOOM SUPREME</h3>
+
+                            <p>
+                                Hidratante corporal premium com nutrição intensa e fragrância sofisticada.
+                            </p>
+
+                            <div class="promotion-prices">
+                                <del>R$129,90</del>
+                                <strong>R$103,92</strong>
+                            </div>
+
+                            <div class="promotion-rating">★★★★★</div>
+
+                            <button class="add-cart">
+                                ADICIONAR AO CARRINHO
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+                <p class="no-promotions" id="no-promotions" hidden>
+                    Nenhum produto encontrado.
+                </p>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+
+        <div class="container footer-container">
+
+            <div class="footer-newsletter">
+
+                <h3>NEWSLETTER</h3>
+
+                <p>Receba novidades e promoções exclusivas</p>
+
+                <form class="newsletter-form">
+
+                    <input type="email" placeholder="Seu e-mail" required>
+
+                    <button type="submit" aria-label="Cadastrar e-mail">
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <div class="footer-social">
+
+                <h3>SIGA A FIFTH BLOOM</h3>
+
+                <div class="social-links">
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+
+                    <a href="#" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a href="#" aria-label="Pinterest">
+                        <i class="fa-brands fa-pinterest"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-payment">
+
+                <h3>FORMAS DE PAGAMENTO</h3>
+
+                <div class="payment-icons">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-pix"></i>
+                    <i class="fa-brands fa-cc-amex"></i>
+                    <i class="fa-brands fa-apple-pay"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; <span id="ano"></span> Fifth Bloom.
+                Todos os direitos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+    <script src="promocoes.js"></script>
+
+</body>
+</html>
